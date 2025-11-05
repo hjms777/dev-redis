@@ -8,6 +8,11 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
+  cache:
+    type: redis
+    cache-names: members
+    redis:
+      time-to-live: 60000 # 60초
 
   h2:
     console:
